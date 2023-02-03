@@ -8,7 +8,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  border-bottom: 5px solid rgb(5, 5, 5);
- font-weight: bold; 
+  font-size: calc(20px + 2vmin);
+  font-family: "Times New Roman", Times, serif;
+  border-bottom: 2px solid rgb(218, 211, 211);
+  font-weight: bolder;
+}
+
+.game-board {
+  width: 350px;
+  height: 420px;
+  border: 2px solid gray;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: flex;
+  background-color: rgb(247, 247, 249);
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+}
+
+.row-module {
+  display: flex;
 }
