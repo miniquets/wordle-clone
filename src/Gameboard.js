@@ -1,54 +1,36 @@
 import React from "react";
+// import { useState } from "react";
 
 class Gameboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentWord: "",
+    };
+  }
+
+  //input
+  //event target value
+  //setState
+
   render() {
+    console.log(this.state.currentWord.charAt(0));
     return (
-      <div class="game-board">
+      <div className="game-board">
         <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
-        </div>
-        <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
+          <div className="letter-box">{this.state.currentWord[0]}</div>
+          <div className="letter-box">{this.state.currentWord[1]}</div>
+          <div className="letter-box">{this.state.currentWord[2]}</div>
+          <div className="letter-box">{this.state.currentWord[3]}</div>
+          <div className="letter-box">{this.state.currentWord[4]}</div>
         </div>
 
-        <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
-        </div>
-        <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
-        </div>
-
-        <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
-        </div>
-
-        <div className="row-module">
-          <div class="letter-box">2</div>
-          <div class="letter-box">3</div>
-          <div class="letter-box">4</div>
-          <div class="letter-box">5</div>
-          <div class="letter-box">5</div>
-        </div>
+        <input
+          type="text"
+          id="myText"
+          value={this.currentWord}
+          onChange={(e) => this.setState({ currentWord: e.target.value })}
+        />
       </div>
     );
   }
